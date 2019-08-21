@@ -1,24 +1,24 @@
-import { UPDATE_NEW_BOOK_TITLE,
-  UPDATE_NEW_BOOK_AUTHOR,
-  UPDATE_NEW_BOOK_ISBN,
-  UPDATE_NEW_BOOK_QTY } from '../constants'
+import { UPDATED_NEW_BOOK_TITLE,
+  UPDATED_NEW_BOOK_AUTHOR,
+  UPDATED_NEW_BOOK_ISBN,
+  UPDATED_NEW_BOOK_QTY } from '../constants'
 
-export const updateNewBookTitle = (value) => ({
-  type: UPDATE_NEW_BOOK_TITLE,
-  value
+export const updateNewBookTitle = (payload) => ({
+  type: UPDATED_NEW_BOOK_TITLE,
+  payload
 })
 
-export const updateNewBookAuthor = (value) => ({
-  type: UPDATE_NEW_BOOK_AUTHOR,
-  value
+export const updateNewBookAuthor = (payload) => ({
+  type: UPDATED_NEW_BOOK_AUTHOR,
+  payload
 })
 
-export const updateNewBookIsbn = (value) => ({
-  type: UPDATE_NEW_BOOK_ISBN,
-  value
+export const updateNewBookIsbn = (payload) => ({
+  type: UPDATED_NEW_BOOK_ISBN,
+  payload
 })
 
-export const updateNewBookQty = (value) => ({
-  type: UPDATE_NEW_BOOK_QTY,
-  value
+export const updateNewBookQty = (payload) => ({
+  type: UPDATED_NEW_BOOK_QTY,
+  payload
 })

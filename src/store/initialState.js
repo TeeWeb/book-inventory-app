@@ -1,4 +1,5 @@
 import uniqueId from 'lodash/uniqueId';
+import PropTypes from 'prop-types'
 
 const books = [
   { title: 'Pants', id: uniqueId(), checkedOut: false, author: 'J.K. Rowling', isbn: '12345', qty: 2 },
@@ -13,6 +14,14 @@ const books = [
   { title: 'Passport', id: uniqueId(), checkedOut: true, author: 'J.K. Rowling', isbn: '12345', qty: 2 },
   { title: 'Sandwich', id: uniqueId(), checkedOut: true, author: 'J.K. Rowling', isbn: '12345', qty: 2 },
 ];
+
+books.PropTypes = {
+  title: PropTypes.string.isRequired,
+  checkedOut: PropTypes.bool.isRequired,
+  author: PropTypes.string.isRequired,
+  isbn: PropTypes.string.isRequired,
+  qty: PropTypes.number.isRequired
+}
 
 export default {
   books: {

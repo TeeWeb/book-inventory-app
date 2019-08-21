@@ -1,18 +1,18 @@
-import { UPDATE_NEW_BOOK_TITLE,
-  UPDATE_NEW_BOOK_AUTHOR,
-  UPDATE_NEW_BOOK_ISBN,
-  UPDATE_NEW_BOOK_QTY } from '../constants'
+import { UPDATED_NEW_BOOK_TITLE,
+  UPDATED_NEW_BOOK_AUTHOR,
+  UPDATED_NEW_BOOK_ISBN,
+  UPDATED_NEW_BOOK_QTY } from '../constants'
 
 export default function(state = '', action) {
   switch (action.type) {
-    case UPDATE_NEW_BOOK_TITLE: 
-      return action.value;
-    case UPDATE_NEW_BOOK_AUTHOR: 
-      return action.value;
-    case UPDATE_NEW_BOOK_ISBN: 
-      return action.value;
-    case UPDATE_NEW_BOOK_QTY:
-      return action.value;
+    case UPDATED_NEW_BOOK_TITLE: 
+      return {...state, title: action.payload}
+    case UPDATED_NEW_BOOK_AUTHOR: 
+      return {...state, author: action.payload}
+    case UPDATED_NEW_BOOK_ISBN: 
+      return { ...state, isbn: action.payload}
+    case UPDATED_NEW_BOOK_QTY:
+      return {...state, qty: action.payload}
     default:
       return state;
   }
