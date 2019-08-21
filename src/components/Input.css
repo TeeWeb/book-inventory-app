@@ -1,0 +1,9 @@
+.new-book {
+  margin: 2em 0;
+}
+
+.new-book-input {
+  margin: auto;
+  margin-bottom: 1em;
+  display: block
+}

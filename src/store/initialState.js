@@ -34,7 +34,7 @@ export default {
     checkedInBooksFilter: '',
   },
   newBook: {
-    id: {},
+    id: uniqueId(),
     title: '',
     author: '',
     isbn: '',

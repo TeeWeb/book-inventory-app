@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Input.css'
+
 export default class NewBook extends React.Component {
   handleChange = event => {
     const value = event.target.value;

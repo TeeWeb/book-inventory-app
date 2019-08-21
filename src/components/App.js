@@ -10,7 +10,7 @@ export default class App extends React.Component {
       <div className="App">
         <h2>Add a Book</h2>
         <NewBookContainer />
-        {/* <BookshelfContainer /> */}
+        <BookshelfContainer />
         {/*<Toolbar /> */}
       </div>
     );

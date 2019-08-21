@@ -1,0 +1,7 @@
+.book {
+  width: 100%;
+  border: 1px solid #000;
+  font-size: .75em;
+  height: 5em;
+  display: inline;
+}

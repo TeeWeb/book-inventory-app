@@ -8,8 +8,12 @@ import { checkOutBook,
   removeBook, 
   editBook } from '../actions/bookshelf-actions'
 
-const mapStateToProps = () => {
-  
+const mapStateToProps = ({ books }) => {
+  console.log(books.present)
+  return { 
+    title: 'Bookshelf',
+    books: books.present.filter(book => !book.checkedOut) 
+  }
 }
 
 const mapDispatchToProps = () => {
