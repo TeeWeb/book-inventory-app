@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Instructions for running the Book Inventory App locally:
+1. Open your terminal on your computer  
+2. Navigate into the bookInventoryApp/ directory ( cd ~/path_to/bookInventoryApp/ )  
+3. Run npm install to install the project’s dependencies  
+4. Run npm start to start the local development server on your computer  
+5. Note the port # that the server is running on when it starts (default is 3000)  
+6. Open your favorite web browser to that port on your local machine (i.e. localhost:3000 or 127.0.0.1:3000). The app may also automatically open your default browser to the correct address after running the previous command.  
+7. The app should now be running successfully in your web browser  
+
+Below you will find some information on how to perform common tasks.<br>
+You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
 ## Available Scripts
 
 In the project directory, you can run:
