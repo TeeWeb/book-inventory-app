@@ -5,8 +5,8 @@ import './Books.css'
 
 export default class Books extends React.Component {
   render() {
-    const { title, books, onCheckout, onCheckIn, onRemove } = this.props
-    console.log(books)
+    const { title, books, onCheckOut, onCheckIn, onRemove, onEdit, } = this.props
+
     return(
       <section className="bookshelf">
         <header>
@@ -16,8 +16,9 @@ export default class Books extends React.Component {
         <div className="books">
           {books.map(book => (
             <Book key={book.id} 
-              onCheckout={() => onCheckout(book.id)}
+              onCheckOut={() => onCheckOut(book.id)}
               onCheckIn={() => onCheckIn(book.id)}
+              onEdit={() => onEdit(book.id)}
               onRemove={() => onRemove(book.id)}
               {...book}
             />

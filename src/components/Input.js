@@ -23,35 +23,36 @@ export default class NewBook extends React.Component {
     }
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    const { value }  = this.props;
-    this.props.addNewBook(value);
+    const { title, author, isbn, qty }  = this.props;
+    for (let i = 0; i < qty; i++) {
+      this.props.addNewBook(title, author, isbn);
+    }
   }
 
   render() {
-    const { title, author, ibsn, qty } = this.props
-
+    const { title, author, isbn, qty } = this.props
     return (
       <form className="new-book" onSubmit={this.handleSubmit}>
         <input className="new-book-input" 
           type="text" 
-          value={title} 
+          title={title} 
           placeholder="Title"
           onChange={this.handleChange} />
         <input className="new-book-input" 
           type="text" 
-          value={author} 
+          author={author} 
           placeholder="Author"
           onChange={this.handleChange} />
         <input className="new-book-input" 
           type="text" 
-          value={ibsn} 
+          isbn={isbn} 
           placeholder="ISBN"
           onChange={this.handleChange} />
         <input className="new-book-input" 
           type="text" 
-          value={qty} 
+          qty={qty} 
           placeholder="Quantity"
           onChange={this.handleChange} />
         <input className="new-book-submit button" type="submit" value="Add Book" ></input>

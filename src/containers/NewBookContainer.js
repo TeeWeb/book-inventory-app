@@ -8,8 +8,7 @@ import { updateNewBookTitle,
   updateNewBookQty } from '../actions/new-book-actions'
 import { addNewBook } from '../actions/bookshelf-actions'
 
-const mapStateToProps = (newBook) => {
-  console.log(newBook)
+const mapStateToProps = ({ newBook }) => {
   return ({
     title: newBook.title,
     author: newBook.author,
@@ -24,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
     updateNewBookAuthor,
     updateNewBookIsbn,
     updateNewBookQty,
-    addNewBook
+    addNewBook,
   }, dispatch)
 }
 

@@ -1,12 +1,18 @@
-.new-book {
-  margin: 1em 0;
+.search,
+.search-form,
+.alpha-sort-btn {
+  margin: 1em auto;
 }
 
-.new-book-input {
+.search-input {
   margin: auto;
   margin-bottom: 1em;
   display: block;
   border: 1px solid #aaa;
   background-color: lavender;
   color: #000;
+}
+
+.alpha-sort-btn {
+  display: block;
 }

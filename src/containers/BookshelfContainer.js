@@ -1,23 +1,33 @@
 import { connect } from 'react-redux'
-import bindActionCreators from 'redux'
 
 import Books from '../components/Books'
-import { checkOutBook, 
-  checkInBook, 
-  sortBooksAlphabetically, 
-  removeBook, 
-  editBook } from '../actions/bookshelf-actions'
+import { checkOutBook,
+  checkInBook,
+  removeBook } from '../actions/bookshelf-actions'
 
-const mapStateToProps = ({ books }) => {
-  console.log(books.present)
-  return { 
-    title: 'Bookshelf',
-    books: books.present.filter(book => !book.checkedOut) 
-  }
+const mapStateToProps = ({ books, search }) => {
+  if (!search.value) {
+    return { 
+      books: books.filter(book => !book.isCheckedOut)
+    }
+  } else {
+    return { 
+      books: books.filter(book => !book.isCheckedOut && 
+        book.title.toLowerCase().includes(search.value))
+    }
+  }  
 }
 
-const mapDispatchToProps = () => {
-
-}
+const mapDispatchToProps = (dispatch) => ({
+    onCheckOut(id) {
+      dispatch(checkOutBook(id))
+    },
+    onCheckIn(id) {
+      dispatch(checkInBook(id))
+    },
+    onRemove(id) {
+      dispatch(removeBook(id))
+    }
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Books)
